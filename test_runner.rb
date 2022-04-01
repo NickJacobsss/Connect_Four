@@ -4,7 +4,6 @@ board = Board.new
 board.intro
 
 
-
   # if user_input == a
   #   player_selection_a
   # elsif user_input == b
