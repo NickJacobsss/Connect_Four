@@ -1,3 +1,5 @@
+require './lib/turn.rb'
+
 class Board
 attr_reader :board
 
