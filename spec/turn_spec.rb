@@ -4,24 +4,21 @@ require 'pry'
 
 RSpec.describe Turn do
 
-  xit "exists" do
-    board = Board.new.board
-    turn = Turn.new(board)
+  it "exists" do
+    board = Board.new
+    turn = Turn.new
     expect(turn).to be_an_instance_of(Turn)
   end
 
-  it "test player column selection" do
+  it "places pieces in the correct spot" do
     board = Board.new
     turn = Turn.new
-    # turn.start_turn
-    turn.piece_placement("A")
+    get_input = "A"
+    turn.piece_placement(get_input)
 
     expect(turn.board.board[:A1]).to eq("X ")
-
+    expect(turn.board.board[:A2]).to eq(". ")
+    # expect(turn.piece_placement(get_input)).to eq("Column A is full, please select another column.")
     # binding.pry
-    # @player_selection = "A"
-    # turn.piece_placement
-    # turn.column_a_selected
-    # expect(board[:A1]).to eq("X ")
   end
 end
