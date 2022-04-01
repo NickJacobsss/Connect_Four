@@ -1,3 +1,5 @@
+require './lib/turn.rb'
+
 class Board
 attr_reader :board
 
@@ -35,5 +37,6 @@ attr_reader :board
       puts "------------------------------------------"
       gets.chomp
       make_board
+      start_turn
   end
 end
