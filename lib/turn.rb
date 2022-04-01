@@ -2,7 +2,6 @@
 require 'pry'
 
 class Turn
-
   attr_reader :board
 
   def initialize
@@ -56,122 +55,110 @@ class Turn
         else
           puts "Column A is full, please select another column."
         end
-      end
-    #   elsif @player_selection == "B"
-    #     if board[:B1] == ". "
-    #       board[:B1] = "X "
-    #     elsif board[:B2] == ". "
-    #       board[:B2] = "X "
-    #     elsif board[:B3] == ". "
-    #       board[:B3] = "X "
-    #     elsif board[:B4] == ". "
-    #       board[:B4] = "X "
-    #     elsif board[:B5] == ". "
-    #       board[:B5] = "X "
-    #     elsif board[:B6] == ". "
-    #       board[:B6] = "X "
-    #     else
-    #       puts "Column B is full, please select another column."
-    #
-    #     end
-    #   end
-    #
-    # # def column_c_selected
-    #   if @board[:C1] == ". "
-    #     @board[:C1] = "X "
-    #   elsif @board[:C2] == ". "
-    #     @board[:C2] = "X "
-    #   elsif @board[:C3] == ". "
-    #     @board[:C3] = "X "
-    #   elsif @board[:C4] == ". "
-    #     @board[:C4] = "X "
-    #   elsif @board[:C5] == ". "
-    #     @board[:C5] = "X "
-    #   elsif @board[:C6] == ". "
-    #     @board[:C6] = "X "
-    #   else
-    #     puts "Column C is full, please select another column."
-    #
-    #   end
-    # end
-    #
-    # def column_d_selected
-    #   if @board[:D1] == ". "
-    #     @board[:D1] = "X "
-    #   elsif @board[:D2] == ". "
-    #     @board[:D2] = "X "
-    #   elsif @board[:D3] == ". "
-    #     @board[:D3] = "X "
-    #   elsif @board[:D4] == ". "
-    #     @board[:D4] = "X "
-    #   elsif @board[:D5] == ". "
-    #     @board[:D5] = "X "
-    #   elsif @board[:D6] == ". "
-    #     @board[:D6] = "X "
-    #   else
-    #     puts "Column D is full, please select another column."
-    #
-    #   end
-    # end
-    #
-    # def column_e_selected
-    #   if @board[:E1] == ". "
-    #     @board[:E1] = "X "
-    #   elsif @board[:E2] == ". "
-    #     @board[:E2] = "X "
-    #   elsif @board[:E3] == ". "
-    #     @board[:E3] = "X "
-    #   elsif @board[:E4] == ". "
-    #     @board[:E4] = "X "
-    #   elsif @board[:E5] == ". "
-    #     @board[:E5] = "X "
-    #   elsif @board[:E6] == ". "
-    #     @board[:E6] = "X "
-    #   else
-    #     puts "Column E is full, please select another column."
-    #     star_turn
-    #   end
-    # end
-    #
-    # def column_f_selected
-    #   if @board[:F1] == ". "
-    #     @board[:F1] = "X "
-    #   elsif @board[:F2] == ". "
-    #     @board[:F2] = "X "
-    #   elsif @board[:F3] == ". "
-    #     @board[:F3] = "X "
-    #   elsif @board[:F4] == ". "
-    #     @board[:F4] = "X "
-    #   elsif @board[:F5] == ". "
-    #     @board[:F5] = "X "
-    #   elsif @board[:F6] == ". "
-    #     @board[:F6] = "X "
-    #   else
-    #     puts "Column F is full, please select another column."
-    #     star_turn
-    #   end
-    # end
-    #
-    # def column_g_selected
-    #   if @board[:G1] == ". "
-    #     @board[:G1] = "X "
-    #   elsif @board[:G2] == ". "
-    #     @board[:G2] = "X "
-    #   elsif @board[:G3] == ". "
-    #     @board[:G3] = "X "
-    #   elsif @board[:G4] == ". "
-    #     @board[:G4] = "X "
-    #   elsif @board[:G5] == ". "
-    #     @board[:G5] = "X "
-    #   elsif @board[:G6] == ". "
-    #     @board[:G6] = "X "
-    #   else
-    #     puts "Column G is full, please select another column."
-    #     star_turn
-    #   end
-    # end
 
+      elsif get_input == "B"
+        if @board.board[:B1] == ". "
+          @board.board[:B1] = "X "
+        elsif @board.board[:B2] == ". "
+          @board.board[:B2] = "X "
+        elsif @board.board[:B3] == ". "
+          @board.board[:B3] = "X "
+        elsif @board.board[:B4] == ". "
+          @board.board[:B4] = "X "
+        elsif @board.board[:B5] == ". "
+          @board.board[:B5] = "X "
+        elsif @board.board[:B6] == ". "
+          @board.board[:B6] = "X "
+        else
+          puts "Column B is full, please select another column."
+        end
+
+      elsif get_input == "C"
+        if @board.board[:C1] == ". "
+          @board.board[:C1] = "X "
+        elsif @board.board[:C2] == ". "
+          @board.board[:C2] = "X "
+        elsif @board.board[:C3] == ". "
+          @board.board[:C3] = "X "
+        elsif @board.board[:C4] == ". "
+          @board.board[:C4] = "X "
+        elsif @board.board[:C5] == ". "
+          @board.board[:C5] = "X "
+        elsif @board.board[:C6] == ". "
+          @board.board[:C6] = "X "
+        else
+          puts "Column C is full, please select another column."
+        end
+
+      elsif get_input == "D"
+        if @board.board[:D1] == ". "
+          @board.board[:D1] = "X "
+        elsif @board.board[:D2] == ". "
+          @board.board[:D2] = "X "
+        elsif @board.board[:D3] == ". "
+          @board.board[:D3] = "X "
+        elsif @board.board[:D4] == ". "
+          @board.board[:D4] = "X "
+        elsif @board.board[:D5] == ". "
+          @board.board[:D5] = "X "
+        elsif @board.board[:D6] == ". "
+          @board.board[:D6] = "X "
+        else
+          puts "Column D is full, please select another column."
+        end
+
+      elsif get_input == "E"
+        if @board.board[:E1] == ". "
+          @board.board[:E1] = "X "
+        elsif @board.board[:E2] == ". "
+          @board.board[:E2] = "X "
+        elsif @board.board[:E3] == ". "
+          @board.board[:E3] = "X "
+        elsif @board.board[:E4] == ". "
+          @board.board[:E4] = "X "
+        elsif @board.board[:E5] == ". "
+          @board.board[:E5] = "X "
+        elsif @board.board[:E6] == ". "
+          @board.board[:E6] = "X "
+        else
+          puts "Column E is full, please select another column."
+        end
+
+      elsif get_input == "F"
+        if @board.board[:F1] == ". "
+          @board.board[:F1] = "X "
+        elsif @board.board[:F2] == ". "
+          @board.board[:F2] = "X "
+        elsif @board.board[:F3] == ". "
+          @board.board[:F3] = "X "
+        elsif @board.board[:F4] == ". "
+          @board.board[:F4] = "X "
+        elsif @board.board[:F5] == ". "
+          @board.board[:F5] = "X "
+        elsif @board.board[:F6] == ". "
+          @board.board[:F6] = "X "
+        else
+          puts "Column F is full, please select another column."
+        end
+
+      elsif get_input == "G"
+        if @board.board[:G1] == ". "
+          @board.board[:G1] = "X "
+        elsif @board.board[:G2] == ". "
+          @board.board[:G2] = "X "
+        elsif @board.board[:G3] == ". "
+          @board.board[:G3] = "X "
+        elsif @board.board[:G4] == ". "
+          @board.board[:G4] = "X "
+        elsif @board.board[:G5] == ". "
+          @board.board[:G5] = "X "
+        elsif @board.board[:G6] == ". "
+          @board.board[:G6] = "X "
+        else
+          puts "Column G is full, please select another column."
+        end
+      end
+    end
     # def randomizer
-    # array_possible = ["a", "b"].random
-  end
+    # array_possible = ["a", "b"].random computer_turn [1,2,3].sample
 end
