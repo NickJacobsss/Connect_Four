@@ -1,7 +1,7 @@
-require './lib/board'
+require './lib/game'
 
-board = Board.new
-board.intro
+game = Game.new
+game.intro
 
 
 
