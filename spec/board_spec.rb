@@ -10,6 +10,6 @@ RSpec.describe Board do
   it "tests make_board" do
     board = Board.new
     board.make_board
-
   end
+  
 end

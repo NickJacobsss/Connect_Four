@@ -24,6 +24,5 @@ attr_reader :board
       end
       puts current_row.values.join
     end
-    puts ""
   end
 end
