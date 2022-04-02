@@ -1,5 +1,3 @@
-require './lib/turn.rb'
-
 class Board
 attr_reader :board
 
@@ -16,7 +14,6 @@ attr_reader :board
 
   def make_board
     rows = ["6","5","4","3","2","1"]
-    puts ""
     puts "A B C D E F G"
     rows.each do |row|
       current_row = {}
@@ -27,16 +24,6 @@ attr_reader :board
       end
       puts current_row.values.join
     end
-  end
-
-  def intro
-      puts ""
-      puts "Welcome to Connect Four!"
-      puts "To win: Line up 4 Pieces in any Direction!"
-      puts "Press Enter to Begin:"
-      puts "------------------------------------------"
-      gets.chomp
-      make_board
-      start_turn
+    puts ""
   end
 end
