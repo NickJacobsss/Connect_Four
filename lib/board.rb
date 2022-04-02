@@ -15,8 +15,8 @@ attr_reader :board
   end
 
   def make_board
-    rows = ["1","2","3","4","5","6"]
-    puts
+    rows = ["6","5","4","3","2","1"]
+    puts ""
     puts "A B C D E F G"
     rows.each do |row|
       current_row = {}
