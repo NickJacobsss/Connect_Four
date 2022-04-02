@@ -8,6 +8,7 @@ attr_reader :board, :computer_input
 
   def computer_turn
     computer_input = ["A","B","C","D","E","F","G"].sample
+    piece_placement(computer_input)
 
   end
 
