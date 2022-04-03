@@ -7,9 +7,10 @@ RSpec.describe Board do
     expect(board).to be_an_instance_of(Board)
   end
 
-  it "tests make_board" do
+  it "prints current version of board" do
     board = Board.new
     board.make_board
+    expect(board.make_board).to eq()
 
   end
 end

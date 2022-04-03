@@ -3,19 +3,20 @@ require 'pry'
 class Player
   attr_reader :board
 
-  def initialize
-    @board = Board.new
+  def initialize(board)
+    @board = board
   end
 
   def player_turn
+    puts ""
     puts "Please pick & enter a letter A - G"
-    puts "===================================="
-    get_input = "A"
+    puts "----------------------------------"
+    get_input = gets.chomp
     piece_placement(get_input)
   end
 
   def piece_placement(get_input)
-    if get_input == "A"
+    if get_input.upcase == "A"
       if @board.board[:A1] == ". "
         @board.board[:A1] = "X "
       elsif @board.board[:A2] == ". "
@@ -30,9 +31,10 @@ class Player
         @board.board[:A6] = "X "
       else
         puts "Column A is full, please select another column."
+        player_turn
       end
 
-    elsif get_input == "B"
+    elsif get_input.upcase == "B"
       if @board.board[:B1] == ". "
         @board.board[:B1] = "X "
       elsif @board.board[:B2] == ". "
@@ -47,9 +49,10 @@ class Player
         @board.board[:B6] = "X "
       else
         puts "Column B is full, please select another column."
+        player_turn
       end
 
-    elsif get_input == "C"
+    elsif get_input.upcase == "C"
       if @board.board[:C1] == ". "
         @board.board[:C1] = "X "
       elsif @board.board[:C2] == ". "
@@ -64,9 +67,10 @@ class Player
         @board.board[:C6] = "X "
       else
         puts "Column C is full, please select another column."
+        player_turn
       end
 
-    elsif get_input == "D"
+    elsif get_input.upcase == "D"
       if @board.board[:D1] == ". "
         @board.board[:D1] = "X "
       elsif @board.board[:D2] == ". "
@@ -81,9 +85,10 @@ class Player
         @board.board[:D6] = "X "
       else
         puts "Column D is full, please select another column."
+        player_turn
       end
 
-    elsif get_input == "E"
+    elsif get_input.upcase == "E"
       if @board.board[:E1] == ". "
         @board.board[:E1] = "X "
       elsif @board.board[:E2] == ". "
@@ -98,9 +103,10 @@ class Player
         @board.board[:E6] = "X "
       else
         puts "Column E is full, please select another column."
+        player_turn
       end
 
-    elsif get_input == "F"
+    elsif get_input.upcase == "F"
       if @board.board[:F1] == ". "
         @board.board[:F1] = "X "
       elsif @board.board[:F2] == ". "
@@ -115,9 +121,10 @@ class Player
         @board.board[:F6] = "X "
       else
         puts "Column F is full, please select another column."
+        player_turn
       end
 
-    elsif get_input == "G"
+    elsif get_input.upcase == "G"
       if @board.board[:G1] == ". "
         @board.board[:G1] = "X "
       elsif @board.board[:G2] == ". "
@@ -132,7 +139,11 @@ class Player
         @board.board[:G6] = "X "
       else
         puts "Column G is full, please select another column."
+        player_turn
       end
+    else
+      puts "Invalid letter, Try again"
+      player_turn
     end
   end
 end
