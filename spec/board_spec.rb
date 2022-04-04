@@ -12,6 +12,7 @@ RSpec.describe Board do
   it "prints blank version of board" do
     board = Board.new
     board.make_board
+
     printed_board = {
       A6: ". ", B6: ". ", C6: ". ", D6: ". ", E6: ". ", F6: ". ", G6: ". ",
       A5: ". ", B5: ". ", C5: ". ", D5: ". ", E5: ". ", F5: ". ", G5: ". ",
