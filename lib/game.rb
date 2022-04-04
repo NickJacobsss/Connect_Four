@@ -1,14 +1,16 @@
 require './lib/board'
 require './lib/player'
 require './lib/computer'
+require './lib/winner'
 
 class Game
-  attr_reader :board, :player, :computer
+  attr_reader :board, :player, :computer, :winner
 
   def initialize
     @board = Board.new
     @player = Player.new(@board)
     @computer = Computer.new(@board)
+    @winner = Winner.new(@board)
   end
 
   def intro
@@ -31,7 +33,7 @@ class Game
     if !@board.board.values.include?(". ")
       puts "The game is a draw"
       break
-    end 
+    end
   }
   end
 end
