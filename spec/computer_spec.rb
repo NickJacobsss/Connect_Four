@@ -21,3 +21,5 @@ RSpec.describe Computer do
     expect(computer.board.board.values.include?("O ")).to eq(true)
   end
 end
+
+# expect only 1 O after computer turn.
