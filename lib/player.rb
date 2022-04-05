@@ -1,5 +1,3 @@
-require 'pry'
-
 class Player
   attr_reader :board
 
@@ -9,9 +7,10 @@ class Player
 
   def player_turn
     puts ""
-    puts "Please pick & enter a letter A - G"
-    puts "----------------------------------"
+    puts "Enter a Column A - G:"
+    puts "---------------------"
     get_input = gets.chomp
+    puts `clear`
     piece_placement(get_input)
   end
 
@@ -30,6 +29,8 @@ class Player
       elsif @board.board[:A6] == ". "
         @board.board[:A6] = "X "
       else
+        @board.make_board
+        puts ""
         puts "Column A is full, please select another column."
         player_turn
       end
@@ -48,6 +49,8 @@ class Player
       elsif @board.board[:B6] == ". "
         @board.board[:B6] = "X "
       else
+        @board.make_board
+        puts ""
         puts "Column B is full, please select another column."
         player_turn
       end
@@ -66,6 +69,8 @@ class Player
       elsif @board.board[:C6] == ". "
         @board.board[:C6] = "X "
       else
+        @board.make_board
+        puts ""
         puts "Column C is full, please select another column."
         player_turn
       end
@@ -84,6 +89,8 @@ class Player
       elsif @board.board[:D6] == ". "
         @board.board[:D6] = "X "
       else
+        @board.make_board
+        puts ""
         puts "Column D is full, please select another column."
         player_turn
       end
@@ -102,6 +109,8 @@ class Player
       elsif @board.board[:E6] == ". "
         @board.board[:E6] = "X "
       else
+        @board.make_board
+        puts ""
         puts "Column E is full, please select another column."
         player_turn
       end
@@ -120,6 +129,8 @@ class Player
       elsif @board.board[:F6] == ". "
         @board.board[:F6] = "X "
       else
+        @board.make_board
+        puts ""
         puts "Column F is full, please select another column."
         player_turn
       end
@@ -138,11 +149,15 @@ class Player
       elsif @board.board[:G6] == ". "
         @board.board[:G6] = "X "
       else
+        @board.make_board
+        puts ""
         puts "Column G is full, please select another column."
         player_turn
       end
     else
-      puts "Invalid letter, Try again"
+      @board.make_board
+      puts ""
+      puts "Invalid Column, Try again"
       player_turn
     end
   end

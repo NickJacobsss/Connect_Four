@@ -1,5 +1,3 @@
-require './lib/game'
-require 'pry'
 class Winner
 
   attr_reader :board
@@ -8,7 +6,7 @@ class Winner
     @board = board
   end
 
-  def column_winner #vertical scan
+  def column_winner #vertical winner check
     a_column = @board.board[:A1], @board.board[:A2], @board.board[:A3], @board.board[:A4], @board.board[:A5], @board.board[:A6]
     b_column = @board.board[:B1], @board.board[:B2], @board.board[:B3], @board.board[:B4], @board.board[:B5], @board.board[:B6]
     c_column = @board.board[:C1], @board.board[:C2], @board.board[:C3], @board.board[:C4], @board.board[:C5], @board.board[:C6]
@@ -47,7 +45,7 @@ class Winner
     end
   end
 
-  def row_winner
+  def row_winner #horizontal winner check
     one_row = @board.board[:A1], @board.board[:B1], @board.board[:C1], @board.board[:D1], @board.board[:E1], @board.board[:F1], @board.board[:G1]
     two_row = @board.board[:A2], @board.board[:B2], @board.board[:C2], @board.board[:D2], @board.board[:E2], @board.board[:F2], @board.board[:G2]
     three_row = @board.board[:A3], @board.board[:B3], @board.board[:C3], @board.board[:D3], @board.board[:E3], @board.board[:F3], @board.board[:G3]
@@ -81,7 +79,7 @@ class Winner
     end
   end
 
-  def diagonal_winner
+  def diagonal_winner #Every diagonal winner check
     one_diagonal = @board.board[:A1], @board.board[:B2], @board.board[:C3], @board.board[:D4], @board.board[:E5], @board.board[:F6]
     two_diagonal = @board.board[:B1], @board.board[:C2], @board.board[:D3], @board.board[:E4], @board.board[:F5], @board.board[:G6]
     three_diagonal = @board.board[:C1],@board.board[:D2], @board.board[:E3], @board.board[:F4] , @board.board[:G5]

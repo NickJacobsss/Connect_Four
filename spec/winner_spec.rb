@@ -1,9 +1,7 @@
 require './lib/board'
 require './lib/player'
-require './lib/game'
 require './lib/computer'
 require './lib/winner'
-require 'pry'
 
 RSpec.describe Winner do
 

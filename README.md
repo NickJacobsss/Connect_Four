@@ -1,4 +1,5 @@
-# Connect_Four
-Turing Mod1 Connect Four Pairing Project
+Connect Four Pairing Project:
+Created by Nick Jacobs & Thiago Silveira
+Turing Cohort 2203 BE
 
-Created by Nick Jacobs & Thiago Silveira 
+Type: "ruby game_runner.rb" in terminal to begin playing!
