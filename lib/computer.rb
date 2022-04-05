@@ -1,9 +1,8 @@
 class Computer
-attr_reader :board, :computer_input
+attr_reader :board
 
   def initialize(board)
     @board = board
-    @computer_input = computer_input
   end
 
   def computer_turn
@@ -28,7 +27,6 @@ attr_reader :board, :computer_input
       elsif @board.board[:A6] == ". "
         @board.board[:A6] = "O "
       else
-        puts "Column A is full, please select another column."
         computer_turn
       end
 
@@ -46,7 +44,6 @@ attr_reader :board, :computer_input
       elsif @board.board[:B6] == ". "
         @board.board[:B6] = "O "
       else
-        puts "Column B is full, please select another column."
         computer_turn
       end
 
@@ -64,7 +61,6 @@ attr_reader :board, :computer_input
       elsif @board.board[:C6] == ". "
         @board.board[:C6] = "O "
       else
-        puts "Column C is full, please select another column."
         computer_turn
       end
 
@@ -82,7 +78,6 @@ attr_reader :board, :computer_input
       elsif @board.board[:D6] == ". "
         @board.board[:D6] = "O "
       else
-        puts "Column D is full, please select another column."
         computer_turn
       end
 
@@ -100,7 +95,6 @@ attr_reader :board, :computer_input
       elsif @board.board[:E6] == ". "
         @board.board[:E6] = "O "
       else
-        puts "Column E is full, please select another column."
         computer_turn
       end
 
@@ -118,7 +112,6 @@ attr_reader :board, :computer_input
       elsif @board.board[:F6] == ". "
         @board.board[:F6] = "O "
       else
-        puts "Column F is full, please select another column."
         computer_turn
       end
 
@@ -136,7 +129,6 @@ attr_reader :board, :computer_input
       elsif @board.board[:G6] == ". "
         @board.board[:G6] = "O "
       else
-        puts "Column G is full, please select another column."
         computer_turn
       end
     end
