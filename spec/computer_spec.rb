@@ -1,6 +1,4 @@
 require './lib/board'
-require './lib/player'
-require './lib/game'
 require './lib/computer'
 require 'pry'
 
