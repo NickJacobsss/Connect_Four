@@ -5,5 +5,4 @@
 #### Turing Cohort 2203 BE
 
 
-Type: 
-"ruby game_runner.rb" in terminal to begin playing!
+Type: "ruby game_runner.rb" in terminal to begin playing!
