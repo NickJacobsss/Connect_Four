@@ -1,5 +1,9 @@
-Connect Four Pairing Project:
-Created by Nick Jacobs & Thiago Silveira
-Turing Cohort 2203 BE
+# Connect Four Pairing Project:
 
-Type: "ruby game_runner.rb" in terminal to begin playing!
+#### Created by Nick Jacobs & Thiago Silveira
+
+#### Turing Cohort 2203 BE
+
+
+Type: 
+"ruby game_runner.rb" in terminal to begin playing!
